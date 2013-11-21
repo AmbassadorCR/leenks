@@ -4,7 +4,7 @@
       $http({method: 'GET', url: '/links/'}).
           success(function(data, status, headers, config) {
               $scope.links = data.results;               
-              $scope.view = './Partials/list.html'; 
+              $scope.view = './partials/list.html'; 
           })
       };
 
@@ -30,7 +30,7 @@
           })
       }
 
-      $scope.view = './Partials/list.html'; 
+      $scope.view = './partials/list.html'; 
       $scope.listLinks();
   }
   LinksListCtrl.$inject = ['$scope', '$http'];
