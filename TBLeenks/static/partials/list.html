@@ -10,10 +10,18 @@
 		</thead>
 		<tbody>
 			<tr ng-repeat="link in links">
-				<td>{{link.title}}</td>
+				<td>
+					<span ng-hide="EditingLink">{{link.title}}</span>
+					<input ng-model="link.title" ng-show="EditingLink"></input>
+					<button ng-click="edit(link)"ng-show="EditingLink">Save</button>
+				</td>
 				<td>{{link.num_clicks}}</td>
-				<td>Edit</td>
-				<td>Delete</td>
+				<td>
+					<button ng-click="EditingLink = ! EditingLink">Edit</button>
+				</td>
+				<td>
+					<button ng-click="delete(link.id)">Delete</button>
+				</td>
 			</tr>
 		</tbody>
 	</table>
