@@ -13,4 +13,10 @@ router.register(r'links', views.LinkViewSet)
 urlpatterns = patterns('',
     url(r'^admin/', include(admin.site.urls)),
     url(r'^', include(router.urls)),
+    url(r'^r/', views.redirectView)
 )
+
+from django.contrib.staticfiles.urls import staticfiles_urlpatterns
+urlpatterns += staticfiles_urlpatterns()
+
+
