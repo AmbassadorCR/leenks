@@ -1,4 +1,5 @@
 <div class="table-responsive">
+	<input name="newLink.title" ng-model="newLink.title"></input><button ng-click="create()">Add</button>
 	<table class="table">
 		<thead>
 			<tr>
@@ -12,7 +13,7 @@
 			<tr ng-repeat="link in links">
 				<td>
 					<span ng-hide="EditingLink">{{link.title}}</span>
-					<input ng-model="link.title" ng-show="EditingLink"></input>
+					<input type="text" ng-model="link.title" ng-show="EditingLink"></input>
 					<button ng-click="edit(link)"ng-show="EditingLink">Save</button>
 				</td>
 				<td>{{link.num_clicks}}</td>

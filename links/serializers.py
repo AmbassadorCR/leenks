@@ -6,5 +6,5 @@ class LinkSerializer(serializers.HyperlinkedModelSerializer):
  
     class Meta:
         model = Link
-        fields = ['id', 'title', 'url', 'num_clicks']
+        fields = ['id', 'title', 'num_clicks']
         read_only_fields = ['id']
